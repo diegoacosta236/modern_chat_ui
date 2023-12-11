@@ -13,7 +13,6 @@ const Menu = () => (
   </>
 )
 
-
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
   return (

@@ -3,13 +3,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem 6rem;
+    background-color: var(--color-footer);
 
 }
 
 .gpt3__navbar-links{
     flex: 1;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -41,7 +42,7 @@
 
 .gpt3__navbar-sign{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -71,10 +72,10 @@
 
 .gpt3__navbar-menu_container{
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-direction: column;
-    text-align: end;
+    text-align: flex-end;
     background: var(--color-footer);
     padding: 2rem;
     position: absolute;
