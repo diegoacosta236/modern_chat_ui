@@ -3,21 +3,24 @@ import { RiMenu3Line, RiCloseLine} from 'react-icons/ri'
 import logo from '../../assets/logo.svg'
 import './navbar.css'
 
-window.onscroll = function() {myFunction()};
+document.addEventListener('DOMContentLoaded' , function() {
+  
+  window.onscroll = function() {myStickyFunction()};
 
 
-var navbar = document.getElementById("navbar");
+  var navbar = document.getElementById("navbar");
 
 
-var sticky = navbar.offsetTop;
+  var sticky = navbar.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
+  function myStickyFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
   }
-}
+})
 
 const Menu = () => (
   <>
