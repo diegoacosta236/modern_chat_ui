@@ -3,6 +3,22 @@ import { RiMenu3Line, RiCloseLine} from 'react-icons/ri'
 import logo from '../../assets/logo.svg'
 import './navbar.css'
 
+window.onscroll = function() {myFunction()};
+
+
+var navbar = document.getElementById("navbar");
+
+
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
 const Menu = () => (
   <>
   <p><a href='#home'>Home</a></p>
@@ -16,7 +32,7 @@ const Menu = () => (
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
   return (
-    <div className='gpt3__navbar'>
+    <div className='gpt3__navbar' id='navbar'>
       <div className='gpt3__navbar-links'>
         <div className='gpt3__navbar-links_logo'>
           <img src={logo} alt="logo"/>
